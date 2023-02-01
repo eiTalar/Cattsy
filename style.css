@@ -1,0 +1,174 @@
+/* main styles */
+
+:root {
+    --windowWidth: 100%;
+    --windowHeight: 100vh;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+#mainContainer {
+    background-color: MintCream;
+}
+
+.mainHeader {
+    position: relative;
+    height: var(--windowHeight);
+    width: var(--windowWidth);
+    background-image: url("images/cat-gf4cd869fe_1920.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    overflow: hidden;
+}
+
+.mainHeader #back {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 2em;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0;
+    transition: 2.5s;
+}
+
+.mainHeader .headerText {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    color: MintCream;
+    letter-spacing: 1.25px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    opacity: .75;
+    transition: .3s;
+}
+
+.mainHeader .headerText:hover {
+    padding: 15px;
+    font-size: 2.1em;
+    opacity: 1;
+}
+
+.mainHeader .hiddenTab {
+    position: absolute;
+    width: var(--windowWidth);
+    height: var(--windowHeight);
+    opacity: 0;
+    transition: 1.25s;
+}
+
+.mainHeader .tabContent {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.mainHeader .tabContent h1.headed {
+    margin: 15px 0 -5px;
+    font-size: 5em;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mainHeader .tabContent h2.subheaded {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mainHeader .tabContent p:not(.headed, .subheaded) {
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+/* END UP HERE*/
+
+.mainHeader .upBlock .upTab {
+    top: calc(var(--windowHeight) * -1);
+    left: 0;
+    background-color: lightpink;
+    border-radius: 0 0 50% 50%;
+}
+
+.mainHeader .upBlock .upText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--windowWidth);
+}
+
+.mainHeader .downBlock .downTab {
+    top: var(--windowHeight);
+    left: 0;
+    background-color: PeachPuff;
+    border-radius: 50% 50% 0 0;
+}
+
+.mainHeader .downBlock .downText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--windowWidth);
+}
+
+.mainHeader .leftBlock .leftTab {
+    top: 0;
+    left: calc(var(--windowWidth) * -1);
+    background-color: LightYellow;
+}
+
+.mainHeader .leftBlock .leftText {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    height: var(--windowHeight);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.mainHeader .rightBlock .rightTab {
+    top: 0;
+    left: var(--windowWidth);
+    background-color: Lavender;
+}
+
+.mainHeader .rightBlock .rightText {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: var(--windowHeight);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: translate(0, -50%) rotate(180deg);
+}
+
+.activeElement {
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 0 !important;
+    opacity: 0.9 !important;
+}

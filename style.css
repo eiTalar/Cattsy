@@ -43,16 +43,16 @@ html {
     right: 5%;
     font-size: 2em;
     color: white;
-    z-index: 10;
     cursor: pointer;
     opacity: 0;
     transition: 2.5s;
+    z-index: 10;
 }
 
 .mainHeader .headerText {
     display: block;
     padding: 10px;
-    font-size: 20px;
+    font-size: 2rem;
     color: MintCream;
     letter-spacing: 1.25px;
     line-height: 1;
@@ -106,41 +106,41 @@ html {
 
 /* END UP HERE*/
 
-.mainHeader .upBlock .upTab {
+.mainHeader .aboutBlock .aboutTab {
     top: calc(var(--windowHeight) * -1);
     left: 0;
     background-color: lightpink;
     border-radius: 0 0 50% 50%;
 }
 
-.mainHeader .upBlock .upText {
+.mainHeader .aboutBlock .aboutText {
     position: absolute;
     top: 0;
     left: 0;
     width: var(--windowWidth);
 }
 
-.mainHeader .downBlock .downTab {
+.mainHeader .adoptBlock .adoptTab {
     top: var(--windowHeight);
     left: 0;
-    background-color: PeachPuff;
+    background-color: PaleTurquoise;
     border-radius: 50% 50% 0 0;
 }
 
-.mainHeader .downBlock .downText {
+.mainHeader .adoptBlock .adoptText {
     position: absolute;
     bottom: 0;
     left: 0;
     width: var(--windowWidth);
 }
 
-.mainHeader .leftBlock .leftTab {
+.mainHeader .donateBlock .donateTab {
     top: 0;
     left: calc(var(--windowWidth) * -1);
-    background-color: LightYellow;
+    background-color: DarkSeaGreen;
 }
 
-.mainHeader .leftBlock .leftText {
+.mainHeader .donateBlock .donateText {
     position: absolute;
     top: 50%;
     left: 0;
@@ -150,13 +150,13 @@ html {
     text-orientation: mixed;
 }
 
-.mainHeader .rightBlock .rightTab {
+.mainHeader .contactBlock .contactTab {
     top: 0;
     left: var(--windowWidth);
-    background-color: Lavender;
+    background-color: Thistle;
 }
 
-.mainHeader .rightBlock .rightText {
+.mainHeader .contactBlock .contactText {
     position: absolute;
     top: 50%;
     right: 0;
@@ -166,9 +166,15 @@ html {
     transform: translate(0, -50%) rotate(180deg);
 }
 
-.activeElement {
+.activeTab {
     top: 0 !important;
     left: 0 !important;
     border-radius: 0 !important;
     opacity: 0.9 !important;
+    z-index: 5;
+}
+
+.activeText {
+    font-size: 3rem !important;
+    z-index: 10;
 }

@@ -3,32 +3,36 @@
 /* DOM selectors */
 const backBtn = document.getElementById('back');
 
-const upTab = document.querySelector('.upTab');
-const upText = document.querySelector('.upText');
+const aboutTab = document.querySelector('.aboutTab');
+const aboutText = document.querySelector('.aboutText');
 
-const downTab = document.querySelector('.downTab');
-const downText = document.querySelector('.downText');
+const adoptTab = document.querySelector('.adoptTab');
+const adoptText = document.querySelector('.adoptText');
 
-const leftTab = document.querySelector('.leftTab');
-const leftText = document.querySelector('.leftText');
+const donateTab = document.querySelector('.donateTab');
+const donateText = document.querySelector('.donateText');
 
-const rightTab = document.querySelector('.rightTab');
-const rightText = document.querySelector('.rightText');
+const contactTab = document.querySelector('.contactTab');
+const contactText = document.querySelector('.contactText');
 
 /* Event listeners */
-upText.addEventListener('click', () => {
-    upTab.classList.toggle('activeElement');
+aboutText.addEventListener('click', function () {
+    aboutTab.classList.toggle('activeTab');
+    this.classList.toggle('activeText');
 })
 
-downText.addEventListener('click', () => {
-    downTab.classList.toggle('activeElement');
+adoptText.addEventListener('click', function () {
+    adoptTab.classList.toggle('activeTab');
+    this.classList.toggle('activeText');
 })
 
-leftText.addEventListener('click', () => {
-    leftTab.classList.toggle('activeElement');
+donateText.addEventListener('click', function () {
+    donateTab.classList.toggle('activeTab');
+    this.classList.toggle('activeText');
 })
 
-rightText.addEventListener('click', () => {
-    rightTab.classList.toggle('activeElement');
+contactText.addEventListener('click', function () {
+    contactTab.classList.toggle('activeTab');
+    this.classList.toggle('activeText');
 })
 

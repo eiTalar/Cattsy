@@ -1,8 +1,6 @@
 'USE STRICT';
 
 /* DOM selectors */
-const backBtn = document.getElementById('back');
-
 const aboutTab = document.querySelector('.aboutTab');
 const aboutText = document.querySelector('.aboutText');
 
@@ -14,6 +12,8 @@ const donateText = document.querySelector('.donateText');
 
 const contactTab = document.querySelector('.contactTab');
 const contactText = document.querySelector('.contactText');
+
+const donateValues = document.querySelectorAll('.donateBlock .donateValue');
 
 /* Event listeners */
 aboutText.addEventListener('click', function () {

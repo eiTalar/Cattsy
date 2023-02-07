@@ -37,19 +37,7 @@ html {
     overflow: hidden;
 }
 
-.mainHeader #back {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-    opacity: 0;
-    transition: 2.5s;
-    z-index: 10;
-}
-
-.mainHeader .headerText {
+.headerText {
     display: block;
     padding: 10px;
     font-size: 2rem;
@@ -62,13 +50,13 @@ html {
     transition: .3s;
 }
 
-.mainHeader .headerText:hover {
+.headerText:hover {
     padding: 15px;
     font-size: 2.1em;
     opacity: 1;
 }
 
-.mainHeader .hiddenTab {
+.hiddenTab {
     position: absolute;
     width: var(--windowWidth);
     height: var(--windowHeight);
@@ -76,7 +64,7 @@ html {
     transition: 1.25s;
 }
 
-.mainHeader .tabContent {
+.tabContent {
     max-width: 1280px;
     margin: 0 auto;
     padding: 30px 0;
@@ -84,7 +72,7 @@ html {
     color: rgba(0, 0, 0, 0.8);
 }
 
-.mainHeader .tabContent h1.headed {
+.tabContent h1.headed {
     margin: 15px 0 -5px;
     font-size: 5em;
     font-weight: 300;
@@ -92,55 +80,108 @@ html {
     text-transform: uppercase;
 }
 
-.mainHeader .tabContent h2.subheaded {
+.tabContent h2.subheaded {
     font-size: 1.5em;
     font-weight: 400;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.mainHeader .tabContent p:not(.headed, .subheaded) {
+.tabContent p:not(.headed, .subheaded) {
     margin-top: 30px;
     font-size: 1em;
 }
 
-/* END UP HERE*/
+/* About block */
 
-.mainHeader .aboutBlock .aboutTab {
+.aboutBlock .aboutTab {
     top: calc(var(--windowHeight) * -1);
     left: 0;
     background-color: lightpink;
     border-radius: 0 0 50% 50%;
 }
 
-.mainHeader .aboutBlock .aboutText {
+.aboutBlock .aboutText {
     position: absolute;
     top: 0;
     left: 0;
     width: var(--windowWidth);
 }
 
-.mainHeader .adoptBlock .adoptTab {
+.aboutBlock h2.subheaded {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.aboutBlock p.lastParagraph {
+    width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Adoption block */
+
+.adoptBlock .adoptTab {
     top: var(--windowHeight);
     left: 0;
     background-color: PaleTurquoise;
     border-radius: 50% 50% 0 0;
 }
 
-.mainHeader .adoptBlock .adoptText {
+.adoptBlock .adoptText {
     position: absolute;
     bottom: 0;
     left: 0;
     width: var(--windowWidth);
 }
 
-.mainHeader .donateBlock .donateTab {
+.adoptBlock .tabContent {
+    margin-top: 10em;
+    max-width: 1024px;
+}
+
+.adoptBlock h2.subheaded {
+    font-size: 2.5em;
+}
+
+.adoptBlock p.introduction {
+    font-size: 1.5em;
+    margin: -25px 0 50px;
+    text-align: center;
+}
+
+.adoptBlock .adoption {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 3;
+    text-indent: 10px;
+}
+
+.adoptBlock .adoption p:last-child {
+    line-height: 2;
+    font-weight: 600;
+}
+
+.adoptBlock .adoptionList {
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+
+.adoptBlock .adoptionList .adoptionListItem {
+    animation: fadeIn 5s;
+}
+
+/* Donate block */
+.donateBlock .donateTab {
     top: 0;
     left: calc(var(--windowWidth) * -1);
     background-color: DarkSeaGreen;
 }
 
-.mainHeader .donateBlock .donateText {
+.donateBlock .donateText {
     position: absolute;
     top: 50%;
     left: 0;
@@ -150,13 +191,53 @@ html {
     text-orientation: mixed;
 }
 
-.mainHeader .contactBlock .contactTab {
+.donateBlock .tabContent {
+    position: relative;
+    top: 50%;
+    left: auto;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.donateBlock .donateValue {
+    display: inline-block;
+    margin: 50px 25px;
+    cursor: pointer;
+    transition: transform .1s;
+}
+
+.donateBlock .donateValue:hover {
+    transform: scale(1.1);
+}
+
+.donateBlock button {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px black;
+    transition: box-shadow .1s;
+}
+
+.donateBlock button:hover {
+    box-shadow: 0 0 15px 1px black;
+}
+
+.donateBlock button:active {
+    background-color: darkseagreen;
+}
+
+/* Contact block */
+.contactBlock .contactTab {
     top: 0;
     left: var(--windowWidth);
     background-color: Thistle;
 }
 
-.mainHeader .contactBlock .contactText {
+.contactBlock .contactText {
     position: absolute;
     top: 50%;
     right: 0;
@@ -177,4 +258,14 @@ html {
 .activeText {
     font-size: 3rem !important;
     z-index: 10;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
 }

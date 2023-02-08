@@ -13,7 +13,7 @@ const donateText = document.querySelector('.donateText');
 const contactTab = document.querySelector('.contactTab');
 const contactText = document.querySelector('.contactText');
 
-const donateValues = document.querySelectorAll('.donateBlock .donateValue');
+// const donateValues = document.querySelectorAll('.donateBlock .donateValue');
 
 /* Event listeners */
 aboutText.addEventListener('click', function () {

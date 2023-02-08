@@ -23,13 +23,12 @@
                   <h1 class="headed">Cat House</h1>
                   <h2 class="subheaded">Wyimaginowana fundacja, zajmująca się poszukiwaniem domów dla bezdomnych
                      kotów z ulicy.</h2>
-                  <p>Jesteśmy tu po to, aby nasze futrzaste pupile z okolicy zyskały nowe, lepsze życie dzięki
-                     adopcji przez ludzi, którzy potrafią zająć się pupilem i obdarzyć go miłością.</p>
-                  <p>Działamy od roku 2007, kiedy to wspaniały człowiek Krzysztof Iksowski empatyzując do
-                     wszystkich tych kotów, które wałęsają się po ulicach, codziennie walcząc o przeżycie,
-                     łapiąc przy tych wiele chorób i nieraz głodując, wpadł na pomysł utworzenia tymczasowego
-                     domu dla
-                     wszelkich stworków rodzaju kociego.</p>
+                  <p>Jesteśmy tu po to, aby nasze futrzaki z okolicy zyskały nowe, lepsze życie we współpracy z ludzmi,
+                     którzy potrafią zająć się pupilami i obdarzyć je miłością.</p>
+                  <p>Działamy od roku 2007, kiedy to wspaniały człowiek Krzysztof Kociarz empatyzując do
+                     wszystkich tych kotów, które wałęsają się po ulicach, codziennie walcząc o przeżycie, wpadł na
+                     pomysł utworzenia tymczasowego
+                     domu dla wszelkich stworków rodzaju kociego.</p>
                   <p>Zamysł był prosty - wziąć pod opiekę, zająć się kotem i wystawić ogłoszenie, po czym
                      przekazać w dobre ręce. I tak też robimy!</p>
                   <p>Bywają momenty, że tak bardzo człowiek nie chce rozstawać się z tymi uroczymi istotami,
@@ -90,7 +89,7 @@
                      <div class="donateValue">15zł</div>
                      <div class="donateValue">50zł</div>
                   </div>
-                  <button href="nonexistingdonatepage">Donate</button>
+                  <button onclick="location.reload();">Donate</button>
                </div>
             </div>
             <div class="headerText donateText">wsparcie</div>
@@ -104,11 +103,13 @@
                   <p>Drapakowa 5, 60-001 Poznań</p>
                   <p>cathouse@gmail.com</p>
                   <p>220-798-786</p>
-                  <form action="">
-                     <p>imię</p><input type="text">
-                     <p>email</p><input type="email">
-                     <p>wiadomość</p><input type="text">
-                  </form>
+                  <div class="contactForm">
+                     <form action="">
+                        <p>imię*</p><input type="text" placeholder="Twoje imię..." maxlength="20">
+                        <p>email*</p><input type="email" placeholder="Twój adres e-mail..." maxlength="20">
+                        <p>wiadomość</p><textarea placeholder="Twoja wiadomość..."></textarea>
+                     </form>
+                  </div>
                </div>
             </div>
             <div class="headerText contactText">kontakt</div>

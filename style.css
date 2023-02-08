@@ -139,7 +139,10 @@ html {
 }
 
 .adoptBlock .tabContent {
-    margin-top: 10em;
+    position: relative;
+    top: 50%;
+    left: auto;
+    transform: translateY(-50%);
     max-width: 1024px;
 }
 
@@ -167,14 +170,18 @@ html {
 
 .adoptBlock .adoptionList {
     list-style-type: none;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
+    width: 90%;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.adoptBlock .adoptionList .adoptionListItem {
-    animation: fadeIn 5s;
+.adoptBlock .adoptionList .adoptionListItem::first-letter {
+    font-size: 1.3em;
 }
 
 /* Donate block */
+
 .donateBlock .donateTab {
     top: 0;
     left: calc(var(--windowWidth) * -1);
@@ -231,6 +238,7 @@ html {
 }
 
 /* Contact block */
+
 .contactBlock .contactTab {
     top: 0;
     left: var(--windowWidth);
@@ -247,6 +255,68 @@ html {
     transform: translate(0, -50%) rotate(180deg);
 }
 
+.contactBlock .tabContent {
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.contactBlock h2.subheaded {
+    font-size: 3em;
+}
+
+.contactBlock .tabContent>p:first-of-type {
+    margin-bottom: 3em;
+}
+
+.contactBlock .tabContent>p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contactBlock .contactForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    position: relative;
+    margin: 2em auto;
+    padding: 0 35px;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 3%;
+    background-color: #fff;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.contactBlock .contactForm form>p {
+    text-transform: capitalize;
+    font-size: 0.9em;
+}
+
+.contactBlock .contactForm form>input {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid rgba(42, 42, 42, 0.5);
+    border-radius: 3px;
+    margin-top: 0.5em;
+    padding: 10px 10px;
+    width: 40vmin;
+    height: 40px;
+}
+
+.contactBlock .contactForm textarea {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 10px;
+    border-radius: 3px;
+    height: 150px;
+    width: 100%;
+    resize: none;
+}
+
+
+/* dynamic styles */
 .activeTab {
     top: 0 !important;
     left: 0 !important;
@@ -258,14 +328,4 @@ html {
 .activeText {
     font-size: 3rem !important;
     z-index: 10;
-}
-
-@keyframes scaling {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.1);
-    }
 }

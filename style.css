@@ -315,8 +315,30 @@ html {
     resize: none;
 }
 
+.contactBlock .contactForm .sendBtn {
+    margin: .5em auto;
+    display: block;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 400;
+    border-color: #1e90ff;
+    border-radius: 30px;
+    line-height: 1.2;
+    padding: 5px 30px;
+    background-color: #fff;
+    color: #1e90ff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contactBlock .contactForm .sendBtn:hover {
+    box-shadow: 0 0 10px 1px #1e90ff;
+}
+
 
 /* dynamic styles */
+
 .activeTab {
     top: 0 !important;
     left: 0 !important;

@@ -13,7 +13,7 @@ const donateText = document.querySelector('.donateText');
 const contactTab = document.querySelector('.contactTab');
 const contactText = document.querySelector('.contactText');
 
-// const donateValues = document.querySelectorAll('.donateBlock .donateValue');
+const donateValues = [...document.querySelectorAll('.donateBlock .donateValue')];
 
 /* Event listeners */
 aboutText.addEventListener('click', function () {
@@ -29,6 +29,7 @@ adoptText.addEventListener('click', function () {
 donateText.addEventListener('click', function () {
     donateTab.classList.toggle('activeTab');
     this.classList.toggle('activeText');
+
 })
 
 contactText.addEventListener('click', function () {
@@ -36,3 +37,9 @@ contactText.addEventListener('click', function () {
     this.classList.toggle('activeText');
 })
 
+donateValues.forEach(element => {
+    element.addEventListener('click', (el) => {
+        donateValues.forEach(value => value.classList.remove('activeDonateValue'));
+        el.currentTarget.classList.toggle('activeDonateValue');
+    })
+})

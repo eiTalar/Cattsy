@@ -14,6 +14,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
    <link type="image/png" sizes="16x16" rel="icon" href="images\icons8-cat-pot-ios-16-glyph-16.png">
 </head>
+</head>
 
 <body>
    <div id="mainContainer">
@@ -108,11 +109,24 @@
                   <p>cattsy@gmail.com</p>
                   <p>220-798-786</p>
                   <div class="contactForm">
-                     <form action="empty.php" method="post">
-                        <p>imię*</p><input type="text" placeholder="Twoje imię..." maxlength="20">
-                        <p>email*</p><input type="email" placeholder="Twój adres e-mail..." maxlength="20">
-                        <p>wiadomość</p><textarea placeholder="Twoja wiadomość..."></textarea>
-                        <button class="sendBtn">Wyślij</button>
+                     <form action="form.php" method="POST" name="contact-form">
+                        <label for="nickname" aria-hidden="true" class="user-cannot-see"> Nickname
+                           <input type="text" name="nickname" id="nickname" class="user-cannot-see" autocomplete="off"
+                              tabindex="-1">
+                        </label>
+                        <label for="name">
+                           <p>imię</p>
+                        </label>
+                        <input name="name" type="text" placeholder="Twoje imię..." maxlength="20" required>
+                        <label for="email">
+                           <p>email</p>
+                        </label>
+                        <input name="email" type="email" placeholder="Twój adres e-mail..." maxlength="20" required>
+                        <label for="message">
+                           <p>wiadomość</p>
+                        </label>
+                        <textarea name="message" placeholder="Twoja wiadomość..." required></textarea>
+                        <button class="sendBtn" name="submit">Wyślij</button>
                      </form>
                   </div>
                </div>
@@ -122,6 +136,7 @@
       </header>
    </div>
    <script src="script.js"></script>
+   </script>
 </body>
 
 </html>

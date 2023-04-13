@@ -14,6 +14,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
    <link type="image/png" sizes="16x16" rel="icon" href="images\icons8-cat-pot-ios-16-glyph-16.png">
 </head>
+</head>
 
 <body>
    <div id="mainContainer">
@@ -108,10 +109,10 @@
                   <p>cattsy@gmail.com</p>
                   <p>220-798-786</p>
                   <div class="contactForm">
-                     <form action="empty.php" method="post">
-                        <p>imię*</p><input type="text" placeholder="Twoje imię..." maxlength="20">
-                        <p>email*</p><input type="email" placeholder="Twój adres e-mail..." maxlength="20">
-                        <p>wiadomość</p><textarea placeholder="Twoja wiadomość..."></textarea>
+                     <form action="form.php" method="POST" name="contact-form">
+                        <p>imię*</p><input name="name" type="text" placeholder="Twoje imię..." maxlength="20">
+                        <p>email*</p><input name="email" type="email" placeholder="Twój adres e-mail..." maxlength="20">
+                        <p>wiadomość</p><textarea name="message" placeholder="Twoja wiadomość..."></textarea>
                         <button class="sendBtn">Wyślij</button>
                      </form>
                   </div>
@@ -122,6 +123,7 @@
       </header>
    </div>
    <script src="script.js"></script>
+   </script>
 </body>
 
 </html>

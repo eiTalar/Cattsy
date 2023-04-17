@@ -109,19 +109,17 @@
                   <p>cattsy@gmail.com</p>
                   <p>220-798-786</p>
                   <div class="contactForm">
-                     <form action="form.php" method="POST" name="contact-form">
-                        <label for="nickname" aria-hidden="true" class="user-cannot-see"> Nickname
-                           <input type="text" name="nickname" id="nickname" class="user-cannot-see" autocomplete="off"
-                              tabindex="-1">
-                        </label>
+                     <form action="form.php" method="POST" name="contact-form" id="contact-form">
                         <label for="name">
                            <p>imię</p>
                         </label>
-                        <input name="name" type="text" placeholder="Twoje imię..." maxlength="20" required>
+                        <input name="name" type="text" placeholder="Twoje imię..." maxlength="20" autocomplete="off"
+                           required>
                         <label for="email">
                            <p>email</p>
                         </label>
-                        <input name="email" type="email" placeholder="Twój adres e-mail..." maxlength="20" required>
+                        <input name="email" type="email" placeholder="Twój adres e-mail..." maxlength="20"
+                           autocomplete="off" required>
                         <label for="message">
                            <p>wiadomość</p>
                         </label>
@@ -136,6 +134,46 @@
       </header>
    </div>
    <script src="script.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+   <script>
+
+
+      const constraints = {
+         name: {
+            presence: { allowEmpty: false }
+         },
+         email: {
+            presence: { allowEmpty: false },
+            email: true
+         },
+         message: {
+            presence: { allowEmpty: false }
+         }
+      };
+
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function (event) {
+
+         const formValues = {
+            name: form.elements.name.value,
+            email: form.elements.email.value,
+            message: form.elements.message.value
+         };
+
+
+         const errors = validate(formValues, constraints);
+         if (errors) {
+            event.preventDefault();
+            const errorMessage = Object
+               .values(errors)
+               .map(function (fieldValues) {
+                  return fieldValues.join(', ')
+               })
+               .join("\n");
+
+            alert(errorMessage);
+         }
+      }, false);
    </script>
 </body>
 

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+.tabContent {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+
+.tabContent h2.subheaded {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tabContent p:not(.headed, .subheaded) {
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+/* Contact block */
+
+.contactBlock .contactTab {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: Thistle;
+}
+
+.contactBlock .tabContent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.contactBlock h2.subheaded {
+    font-size: 3em;
+}
+
+.contactBlock .tabContent>p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contactBlock .contactForm {
+    margin: 2em auto;
+    padding: 25px 35px;
+    width: 25%;
+    height: auto;
+    border-radius: 3%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.contactBlock .contactForm form>label {
+    text-transform: capitalize;
+    font-size: 0.9em;
+    margin-top: 3rem;
+}
+
+.contactBlock .contactForm form>input {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid rgba(42, 42, 42, 0.5);
+    border-radius: 3px;
+    margin-top: 0.5em;
+    padding: 10px 10px;
+    width: 40vmin;
+    height: 40px;
+}
+
+.contactBlock .contactForm textarea {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 10px;
+    border-radius: 3px;
+    height: 150px;
+    width: 100%;
+    resize: none;
+}
+
+.contactBlock .contactForm .sendBtn {
+    margin: .5em auto;
+    display: block;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-weight: 400;
+    border-color: #1e90ff;
+    border-radius: 30px;
+    line-height: 1.2;
+    padding: 5px 30px;
+    background-color: #fff;
+    color: #1e90ff;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.contactBlock .contactForm .sendBtn:hover {
+    -webkit-box-shadow: 0 0 10px 1px #1e90ff;
+    box-shadow: 0 0 10px 1px #1e90ff;
+}
+
+.contactBlock .contactForm-send {
+    display: grid;
+    gap: 25px;
+    padding: 50px;
+}
+
+.contactForm-send p.paragraph-send {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}

@@ -4,33 +4,38 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $message = $_POST["message"];
 
-require "vendor/autoload.php";
-
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$mail = new PHPMailer(true);
 
-// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
-$mail->isSMTP();
-$mail->SMTPAuth = true;
+if (isset($_POST['submit'])) {
+    $mail = new PHPMailer(true);
 
-$mail->Host = "smtp.example.com";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 587;
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'example@gmail.com';
+    $mail->Password = 'password';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = '587';
 
-$mail->Username = "you@example.com";
-$mail->Password = "password";
+    $mail->setFrom($email, $name);
 
-$mail->setFrom($email, $name);
-$mail->addAddress("dave@example.com", "Dave");
+    $mail->addAddress('example@gmail.com');
 
-$mail->Subject = $subject;
-$mail->Body = $message;
+    $mail->isHTML(true);
 
-$mail->send();
+    $mail->Subject = "Cattsy contacts with you!";
+    $mail->Body = $message;
 
-header("Location: index.html");
-
+    if (!$mail->Send()) {
+        echo "Błąd wysyłania e-maila: " . $mail->ErrorInfo;
+    } else {
+        header("Location: send.html");
+    }
+}
 ?>

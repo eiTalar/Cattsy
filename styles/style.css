@@ -34,7 +34,7 @@ html {
     position: relative;
     height: var(--windowHeight);
     width: var(--windowWidth);
-    background-image: url("images/cat-gf4cd869fe_1920.jpg");
+    background-image: url("../images/cat-gf4cd869fe_1920.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%;
@@ -410,7 +410,6 @@ html {
     -webkit-box-shadow: 0 0 10px 1px #1e90ff;
     box-shadow: 0 0 10px 1px #1e90ff;
 }
-
 
 /* dynamic styles */
 
